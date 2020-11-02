@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+#sidebar {
+    position: fixed;    /* меню должно быть фиксировано */
+    width: 250px;       /* ширина - в зависимости от задачи */
+    height: 100vh;      /* высоту можно указать в процента */
+    background-color: darkslategrey;
+    border-right: 4px solid darkgoldenrod;
+    left: -250px;
+
+    transition: all 500ms;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+}
+
+/* toggler */
+#sidebar.active{
+    left: 0px;
+}
+
+#sidebar ul li:first-child {
+    text-align: center;
+    color: white;
+    font-size: 1.95em;
+    list-style: none;
+    padding: 25px 10px 10px 10px;
+}
+
+#sidebar ul li:not(:first-child){
+    width: 90%;
+    margin-left: 10%;
+    color: white;
+    font-size: 1.1em;
+    padding: 15px 10px;
+    list-style: none;
+}
+
+#sidebar ul li:not(:first-child):hover {
+    background-color: darkolivegreen;
+    cursor: pointer;
+}
+
+#sidebar .toggle-bottom {
+    position: absolute;
+    left: 270px;
+    top: 20px;
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#sidebar .toggle-bottom:hover {
+    cursor: pointer;
+    background-color: darkslategrey;
+}
+
+#sidebar .toggle-bottom span {
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin: 4px 0;
+}
